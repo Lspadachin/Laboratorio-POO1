@@ -2,7 +2,7 @@
 public class Personaje {
 
 	private String nombre;
-	public Personaje(int edad) {
+	public personaje(int edad) {
 		edad = 0;
 	}
 
@@ -18,7 +18,7 @@ public class Personaje {
 	}
 	
 	public int getEdad() {
-		return (int edad);
+		return personaje.edad;
 	}
 	public boolean setEdad(edad) {
 		if (0 > edad > 120)
