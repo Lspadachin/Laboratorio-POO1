@@ -4,7 +4,9 @@ public class Personaje {
 	private Integer edad;
 
 	public Personaje(String personaje){
+		setNombre(personaje);
 		int edad = 0;
+		this.edad = edad;
 	}
 
 	public void setNombre(String nombre) {
@@ -18,10 +20,12 @@ public class Personaje {
 		System.out.println("Hola Alumno de POO " + nombre);
 	}
 	public int getEdad() {
-		return this.edad;
+		edad = this.edad;
+		return edad;
 	}
 	public boolean setEdad(int edad) {
 		if (0<edad & edad<120) {
+			this.edad = edad;
 			return true;
 		} else {
 			return false;
