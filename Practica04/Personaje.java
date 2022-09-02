@@ -1,9 +1,10 @@
-//iniciada a las 7:35
 public class Personaje {
 
 	private String nombre;
-	public personaje(int edad) {
-		edad = 0;
+	private Int edad;
+
+	public Personaje(){
+		int edad = 0;
 	}
 
 	public void setNombre(String nombre) {
@@ -16,15 +17,14 @@ public class Personaje {
 	public void Saludar() {
 		System.out.println("Hola Alumno de POO " + nombre);
 	}
-	
 	public int getEdad() {
-		return personaje.edad;
+		return this.edad;
 	}
-	public boolean setEdad(edad) {
-		if (0 > edad > 120)
-			return true
-		else 
-			return false
+	public boolean setEdad(int edad) {
+		if (0<edad & edad<120) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-
 }
