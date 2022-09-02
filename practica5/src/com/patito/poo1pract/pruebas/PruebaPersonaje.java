@@ -1,3 +1,4 @@
+package com.patito.poo1pract.pruebas;
 import com.patito.poo1pract.personajes.Personaje;
 
 public class PruebaPersonaje {
