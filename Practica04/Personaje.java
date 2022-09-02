@@ -1,9 +1,9 @@
 public class Personaje {
 
 	private String nombre;
-	private Int edad;
+	private Integer edad;
 
-	public Personaje(){
+	public Personaje(String personaje){
 		int edad = 0;
 	}
 
