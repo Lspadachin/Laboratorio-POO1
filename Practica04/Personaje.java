@@ -1,7 +1,7 @@
 public class Personaje {
 
 	private String nombre;
-	private Integer edad;
+	private int edad;
 
 	public Personaje(String personaje){
 		setNombre(personaje);

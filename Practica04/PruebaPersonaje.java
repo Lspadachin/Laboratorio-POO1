@@ -14,7 +14,7 @@ public class PruebaPersonaje {
 		if (!alumno.setEdad(130)){
 			System.out.println("Edad sin cambio");
 		}
-		System.out.println("Nombre: "+alumno.getNombre()+"Edad: "+alumno.getEdad());
+		System.out.println("Nombre: "+alumno.getNombre()+" Edad: "+alumno.getEdad());
 
 	}
 }
