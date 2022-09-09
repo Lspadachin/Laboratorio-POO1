@@ -19,5 +19,21 @@ public class PruebaPersonaje {
 		}
 		System.out.println("Nombre: "+alumno.getNombre()+" Edad: "+alumno.getEdad());
 
+		Personaje per01 = new Personaje("Almendra");
+		per01.setEdad(200);
+		Personaje per02 = new Personaje("Ricardo");
+		per02.setEdad(10);
+		Personaje per03 = new Personaje("Bianca");
+		per03.setEdad(1);
+		Personaje per04 = new Personaje("Leonel");
+		per04.setEdad(-10);
+		Personaje per05 = new Personaje("Hector");
+		per05.setEdad(500);
+
+		per01.getDetalle();
+		per02.getDetalle();
+		per03.getDetalle();
+		per04.getDetalle();
+		per05.getDetalle();
 	}
 }
