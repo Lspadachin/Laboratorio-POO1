@@ -1,5 +1,5 @@
-package com.patito.poo1pract.pruebas;
-import com.patito.poo1pract.personajes.Personaje;
+package edu.escuela.gamepz.pruebas;
+import edu.escuela.gamepz.personajes.Personaje;
 
 public class PruebaPersonaje {
 	public static void main(String[] args) {
@@ -30,11 +30,11 @@ public class PruebaPersonaje {
 		Personaje per05 = new Personaje("Hector");
 		per05.setEdad(500);
 
-		per01.getDetalle();
-		per02.getDetalle();
-		per03.getDetalle();
-		per04.getDetalle();
-		per05.getDetalle();
+		System.out.println(per01.getDetalle());
+		System.out.println(per02.getDetalle());
+		System.out.println(per03.getDetalle());
+		System.out.println(per04.getDetalle());
+		System.out.println(per05.getDetalle());
 
 		Personaje per06 = per05;
 		Personaje per07 = per04;
@@ -42,12 +42,18 @@ public class PruebaPersonaje {
 		Personaje per09 = per02;
 		Personaje per10 = per01;
 
-		Random random = new Random();
-		per07.setEdad(((int)(Math.random()*1001)));
-		per09.setEdad(((int)(Math.random()*1001)));
+		per07.setEdad(((int)(Math.random()*100)));
+		per09.setEdad(((int)(Math.random()*100)));
+		System.out.println("---");
 
-		per06.setNombre(Francisco Xavier Zepeda Flores);
-		per08.setNombre(Dayan);
-		per10.setNombre(Axel Fabian Eduardo David);
+		per06.setNombre("Francisco Xavier Zepeda Flores");
+		per08.setNombre("Dayana");
+		per10.setNombre("Axel Fabian Eduardo David");
+
+		System.out.println(per01.getDetalle());
+		System.out.println(per02.getDetalle());
+		System.out.println(per03.getDetalle());
+		System.out.println(per04.getDetalle());
+		System.out.println(per05.getDetalle());
 	}
 }
