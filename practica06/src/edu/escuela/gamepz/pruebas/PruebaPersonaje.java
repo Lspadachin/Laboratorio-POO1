@@ -42,6 +42,10 @@ public class PruebaPersonaje {
 		Personaje per09 = per02;
 		Personaje per10 = per01;
 
+		Random random = new Random();
+		per07.setEdad(((int)(Math.random()*1001)));
+		per09.setEdad(((int)(Math.random()*1001)));
+
 		per06.setNombre(Francisco Xavier Zepeda Flores);
 		per08.setNombre(Dayan);
 		per10.setNombre(Axel Fabian Eduardo David);
