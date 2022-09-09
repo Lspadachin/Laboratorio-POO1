@@ -32,4 +32,10 @@ public class Personaje {
 			return false;
 		}
 	}
+	public string getDetalle(){
+		nombre = this.nombre;
+		edad = this.edad;
+		combinacion = nombre+"\t"+edad;
+		return combinacion;
+	}
 }
