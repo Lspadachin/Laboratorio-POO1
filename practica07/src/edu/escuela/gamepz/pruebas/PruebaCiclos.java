@@ -8,11 +8,15 @@ public class PruebaCiclos{
 		int n = 0;
 		int m = 0;
 
-		for (; n>=m ;) {
+		while ( n>=m ) {
 			n = Math.random()*100;
 			m = Math.random()*100;
 		}
 		System.out.println(n)
 		System.out.println(m)
+
+		for (n ; n<m ; n++) {
+			per01.setEdad(Math.random()*)
+		}
 	}
 }
