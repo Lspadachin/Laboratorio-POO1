@@ -16,7 +16,7 @@ public class PruebaCiclos{
 		System.out.println(m)
 
 		for (n ; n<m ; n++) {
-			per01.setEdad(Math.random()*)
+			per01.setEdad(((int)(Math.random()*250)))
 		}
 	}
 }
