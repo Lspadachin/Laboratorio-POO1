@@ -1,3 +1,5 @@
+package edu.escuela.gamepz.pruebas;
+import edu.escuela.gamepz.personajes.Personaje;
 public class PruebaCiclos{
 	public static void main(String[] args) {
 		Personaje per01 = new Personaje("Diego");
@@ -9,14 +11,14 @@ public class PruebaCiclos{
 		int m = 0;
 
 		while ( n>=m ) {
-			n = Math.random()*100;
-			m = Math.random()*100;
+			n = (int) Math.random()*100;
+			m = (int) Math.random()*100;
 		}
-		System.out.println(n)
-		System.out.println(m)
+		System.out.println(n);
+		System.out.println(m);
 
-		for (n ; n<m ; n++) {
-			per01.setEdad(((int)(Math.random()*250)))
+		for (int o = n ; n<m ; n++) {
+			per01.setEdad(((int)(Math.random()*250)));
 		}
 	}
 }
