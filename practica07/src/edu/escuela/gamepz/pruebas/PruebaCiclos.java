@@ -14,17 +14,19 @@ public class PruebaCiclos{
 			n = (int) (Math.random()*100);
 			m = (int) (Math.random()*100);
 		}
-		System.out.println(n);
-		System.out.println(m);
 
 		for (int o = n ; o<m ; o++) {
-			int ed = (int)(Math.random()*250);
-			if (per01.setEdad(ed)){
-				System.out.println(per01.getDetalle()+ " se modifico la edad");
+			Personaje[] Personajes = {per01,per02,per03};
+			for (Personaje tmp : Personajes ) {
+				int ed = (int)(Math.random()*250);
+				if (tmp.setEdad(ed)){
+					System.out.println(tmp.getDetalle()+ " se modifico la edad");
+				}
+				else {
+					System.out.println(tmp.getDetalle() + " sin modificaciones a la edad a "+ed);
+				}
 			}
-			else {
-				System.out.println(per01.getDetalle() + " sin modificaciones a la edad a "+ed);
-			}
+			
 		}
 	}
 }
