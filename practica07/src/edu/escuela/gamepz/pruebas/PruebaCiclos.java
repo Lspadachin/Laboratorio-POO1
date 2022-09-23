@@ -20,9 +20,10 @@ public class PruebaCiclos{
 
 		outfor:
 		for (int o = n ; o<m ; o++) {
+			int ed;
 			Personaje[] Personajes = {per01,per02,per03};
 			for (Personaje tmp : Personajes ) {
-				int ed = (int)(Math.random()*250);
+				ed = (int)(Math.random()*250);
 				if (tmp.setEdad(ed)){
 					System.out.println(tmp.getDetalle()+ " se modifico la edad");
 				}
@@ -32,13 +33,13 @@ public class PruebaCiclos{
 			}
 			do{
 				ed = (int)(Math.random()*200);
-				System.out.println(ed)
+				System.out.println(ed);
 				if (ed > 150){
 					System.out.println("El numero generado es mayor a 150");
 					continue outfor;
 				}
 			} while(!(per04.setEdad(ed)));
-			
+			per04.getDetalle();
 		}
 	}
 }
