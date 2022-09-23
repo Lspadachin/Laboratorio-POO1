@@ -15,6 +15,9 @@ public class PruebaCiclos{
 			m = (int) (Math.random()*100);
 		}
 
+		System.out.println(n);
+		System.out.println(m);
+
 		for (int o = n ; o<m ; o++) {
 			Personaje[] Personajes = {per01,per02,per03};
 			for (Personaje tmp : Personajes ) {
