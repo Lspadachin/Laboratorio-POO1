@@ -20,11 +20,10 @@ public class PruebaCiclos{
 		for (int o = n ; o<m ; o++) {
 			int ed = (int)(Math.random()*250);
 			if (per01.setEdad(ed)){
-				System.out.prinln(per01.getNombre()+ " " +per01.getEdad() + "se modifico la edad");
+				System.out.println(per01.getNombre()+ " " +per01.getEdad() + "se modifico la edad");
 			}
 			else {
-				//String eda = (String)ed;
-				System.out.prinln(per01.getNombre()+ " " +per01.getEdad() + "sin modificaciones a la edad a ");
+				System.out.println(per01.getDetalle() + "sin modificaciones a la edad a "+ed);
 			}
 		}
 	}
