@@ -18,6 +18,7 @@ public class PruebaCiclos{
 		System.out.println(n);
 		System.out.println(m);
 
+		outfor:
 		for (int o = n ; o<m ; o++) {
 			Personaje[] Personajes = {per01,per02,per03};
 			for (Personaje tmp : Personajes ) {
@@ -29,6 +30,14 @@ public class PruebaCiclos{
 					System.out.println(tmp.getDetalle() + " sin modificaciones a la edad a "+ed);
 				}
 			}
+			do{
+				ed = (int)(Math.random()*200);
+				System.out.println(ed)
+				if (ed > 150){
+					System.out.println("El numero generado es mayor a 150");
+					continue outfor;
+				}
+			} while(!(per04.setEdad(ed)));
 			
 		}
 	}
