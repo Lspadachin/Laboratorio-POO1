@@ -12,7 +12,7 @@ public class Personaje {
 
 	public void setNombre(String nombre) {
 		int longitud = nombre.length();
-		if ((longitud > 5) && (longitud < 25)){
+		if ((longitud > 3) && (longitud < 25)){
 			this.nombre = nombre;
 		}
 	}

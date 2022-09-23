@@ -11,8 +11,8 @@ public class PruebaCiclos{
 		int m = 0;
 
 		while ( n>=m ) {
-			n = (int) Math.random()*100;
-			m = (int) Math.random()*100;
+			n = (int) (Math.random()*100);
+			m = (int) (Math.random()*100);
 		}
 		System.out.println(n);
 		System.out.println(m);
@@ -20,10 +20,10 @@ public class PruebaCiclos{
 		for (int o = n ; o<m ; o++) {
 			int ed = (int)(Math.random()*250);
 			if (per01.setEdad(ed)){
-				System.out.println(per01.getNombre()+ " " +per01.getEdad() + "se modifico la edad");
+				System.out.println(per01.getDetalle()+ " se modifico la edad");
 			}
 			else {
-				System.out.println(per01.getDetalle() + "sin modificaciones a la edad a "+ed);
+				System.out.println(per01.getDetalle() + " sin modificaciones a la edad a "+ed);
 			}
 		}
 	}
