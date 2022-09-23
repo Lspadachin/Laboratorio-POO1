@@ -35,7 +35,7 @@ public class PruebaCiclos{
 				ed = (int)(Math.random()*200);
 				System.out.println(ed);
 				if (ed > 150){
-					System.out.println("El numero generado es mayor a 150");
+					System.out.println("***El numero generado es mayor a 150***");
 					continue outfor;
 				}
 			} while(!(per04.setEdad(ed)));
