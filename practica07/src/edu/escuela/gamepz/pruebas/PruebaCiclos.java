@@ -17,8 +17,13 @@ public class PruebaCiclos{
 		System.out.println(n);
 		System.out.println(m);
 
-		for (int o = n ; n<m ; n++) {
-			per01.setEdad(((int)(Math.random()*250)));
+		for (int o = n ; o<m ; o++) {
+			int ed = (int)(Math.random()*250);
+			if (per01.setEdad(ed) == true):
+				System.out.prinln(per01.getNombre()+ " " +per01.getEdad() + "se modifico la edad");
+			else {
+				System.out.prinln(per01.getNombre()+ " " +per01.getEdad() + "sin modificaciones a la edad a "+ed);
+			}
 		}
 	}
 }
