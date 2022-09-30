@@ -2,8 +2,15 @@ package mx.parc1.soft.parcial.series;
 
 public class Serie{
 	public int genNumero(int numero){
-		int n = (int)(Math.random()*numero*10);
-	} 
+		int n = 0;
+		if (numero < 10){
+			numero = 100;
+		}
+		while(n<=numero){
+			n = (int)(Math.random()*numero*10);
+		}
+		return n;
+	}
 	public int fiboN(int posicion){
 		if ((posicion == 1) | (posicion == 2)){
 			return 1;
