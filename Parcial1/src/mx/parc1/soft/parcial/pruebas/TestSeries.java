@@ -15,8 +15,7 @@ public class TestSeries {
 *
 *        System.out.println(o);
 */
-        int n = s.genNumero(15);
-        System.out.println(n);
+        int n = s.genNumero(10);
 
         //s.fibo(n);
 

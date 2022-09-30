@@ -8,6 +8,7 @@ public class Serie{
 		}
 		while(n<=numero){
 			n = (int)(Math.random()*numero*10);
+			System.out.println(n);
 		}
 		return n;
 	}
