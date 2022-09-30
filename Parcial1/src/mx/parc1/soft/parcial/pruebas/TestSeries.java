@@ -1,4 +1,5 @@
-package mx.parc1.soft.pruebas;
+package mx.parc1.soft.parcial.pruebas;
+import mx.parc1.soft.parcial.series.Serie;
 
 public class TestSeries {
 
@@ -18,7 +19,7 @@ public class TestSeries {
 
         s.fibo(n);
 
-        int p = s.fiboN(3, 11);
+        int p = s.fiboN(3);
 
         System.out.println(p);
 
