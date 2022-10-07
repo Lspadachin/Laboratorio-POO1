@@ -46,18 +46,26 @@ public class Personaje {
 	}
 
 	public void decVida(){
-		this.vida -= 1;
+		if ((vida-1) >= 0) {
+			vida -= 1;;
+		}
 	}
 
 	public void decVida(int vida){
-		this.vida -+ vida;
+		if ((this.vida-vida) >= 0){
+			this.vida -= vida; 
+		}
 	}
 
 	public void addVida(){
-		this.vida += 1;
+		if ((vida+1) <= 99) {
+			vida += 1;
+		}
 	}
 
 	public void addVida(int vida){
-		this.vida += vida;
+		if ((this.vida+vida) <= 99){
+			this.vida += vida; 
+		}
 	}
 }
