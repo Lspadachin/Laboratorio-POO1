@@ -27,7 +27,12 @@ public class Planta extends Personaje{
 	}
 
 	public char getEscudo(){
+		escudo = this.escudo;
 		return escudo;
+	}
+
+	public String getDetalle(){
+		return (super.getDetalle() + getEscudo());
 	}
 
 	public void decVida(){
@@ -52,7 +57,6 @@ public class Planta extends Personaje{
 	}
 
 	public void addVida(){
-		int vidaPadre = super.getVida();
 		if (escudo == 'A') {
 			super.addVida(2);
 		}
@@ -62,7 +66,6 @@ public class Planta extends Personaje{
 	}
 
 	public void addVida(int vida){
-		int vidaPadre = super.getVida();
 		if (escudo == 'A'){
 			super.addVida(2*vida); 
 		}

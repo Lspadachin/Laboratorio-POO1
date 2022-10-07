@@ -1,6 +1,5 @@
 //Practica iniciada a las 7:35
 package edu.escuela.gamepz.personajes;
-import edu.escuela.gamepz.personajes.buenos.Planta;
 
 public class Personaje {
 
@@ -44,8 +43,7 @@ public class Personaje {
 		}
 	}
 	public String getDetalle(){
-		Planta p = new Planta(nombre, vida);
-		return ""+nombre+"\t"+vida+"\t"+(p.getEscudo());
+		return ""+nombre+"\t"+vida;
 	}
 
 	public void decVida(){
