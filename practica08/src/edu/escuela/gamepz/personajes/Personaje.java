@@ -13,8 +13,7 @@ public class Personaje {
 
 	public Personaje(String personaje){
 		setNombre(personaje);
-		int vida = 3;
-		this.vida = vida;
+		vida = 3;
 	}
 
 	public void setNombre(String nombre) {
@@ -31,11 +30,10 @@ public class Personaje {
 		System.out.println("Hola Alumno de POO " + nombre);
 	}
 	public int getVida() {
-		vida = this.vida;
 		return vida;
 	}
 	public boolean setVida(int vida) {
-		if (0<vida & vida<100) {
+		if (0<vida && vida<100) {
 			this.vida = vida;
 			return true;
 		} else {

@@ -16,11 +16,10 @@ public class Zombie extends Personaje {
 
 	public Zombie(String nombre){
 		super(nombre, 3);
-		this.ataque = false;
+		ataque = false;
 	}
 
 	public boolean getAtaque(){
-		ataque = this.ataque;
 		return ataque;
 	}
 
@@ -38,7 +37,7 @@ public class Zombie extends Personaje {
 	}
 
 	public void decVida(int vida){
-		if (ataque == false){
+		if (!ataque){
 			super.decVida(3*vida); 
 		}
 		else {
@@ -47,13 +46,13 @@ public class Zombie extends Personaje {
 	}
 
 	public void addVida(){
-		if (ataque == true) {
+		if (ataque) {
 			super.addVida(3);
 		}
 	}
 
 	public void addVida(int vida){
-		if (ataque == true){
+		if (ataque){
 			super.addVida(3*vida); 
 		}
 	}

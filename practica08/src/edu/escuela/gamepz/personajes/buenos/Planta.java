@@ -27,7 +27,6 @@ public class Planta extends Personaje{
 	}
 
 	public char getEscudo(){
-		escudo = this.escudo;
 		return escudo;
 	}
 
@@ -39,9 +38,8 @@ public class Planta extends Personaje{
 		int vidaPadre = super.getVida();
 		if (escudo == 'A'){
 			super.decVida(2);
-		}
-
-		if (escudo != 'A') {
+		} 
+		else {
 			super.decVida();
 		}
 	}
@@ -50,8 +48,7 @@ public class Planta extends Personaje{
 		if (escudo == 'A'){
 			super.decVida(2*vida); 
 		}
-
-		if (escudo != 'A'){
+		else {
 			super.decVida(vida);
 		}
 	}
@@ -60,7 +57,7 @@ public class Planta extends Personaje{
 		if (escudo == 'A') {
 			super.addVida(2);
 		}
-		if (escudo != 'A'){
+		else {
 			super.addVida();
 		}
 	}
@@ -69,8 +66,7 @@ public class Planta extends Personaje{
 		if (escudo == 'A'){
 			super.addVida(2*vida); 
 		}
-
-		if (escudo != 'A'){
+		else{
 			super.addVida(vida);
 		}
 	}
