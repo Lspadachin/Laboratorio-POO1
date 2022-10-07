@@ -29,21 +29,20 @@ public class Zombie extends Personaje {
 	}
 
 	public void decVida(){
-		int vidaPadre = super.getVida();
-		if (ataque == true){
+		if (ataque == false){
 			super.decVida(3);
 		}
 		else {
-			super.decVida();
+			super.decVida(2);
 		}
 	}
 
 	public void decVida(int vida){
-		if (ataque == true){
+		if (ataque == false){
 			super.decVida(3*vida); 
 		}
 		else {
-			super.decVida(vida);
+			super.decVida(2*vida);
 		}
 	}
 
@@ -51,17 +50,11 @@ public class Zombie extends Personaje {
 		if (ataque == true) {
 			super.addVida(3);
 		}
-		else {
-			super.addVida();
-		}
 	}
 
 	public void addVida(int vida){
 		if (ataque == true){
 			super.addVida(3*vida); 
-		}
-		else {
-			super.addVida(vida);
 		}
 	}
 }
