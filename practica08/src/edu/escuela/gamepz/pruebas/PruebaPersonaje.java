@@ -5,30 +5,30 @@ public class PruebaPersonaje {
 	public static void main(String[] args) {
 		Personaje alumno = new Personaje("Kal El");
 		alumno.Saludar();
-		System.out.println("Nombre: "+alumno.getNombre()+" Edad: "+alumno.getEdad());
+		System.out.println("Nombre: "+alumno.getNombre()+" vida: "+alumno.getVida());
 		System.out.println("Modificando el nombre "+alumno.getNombre());
 		alumno.setNombre("Muchael Jordan");
 		alumno.Saludar();
-		if (!alumno.setEdad(30)){
-			System.out.println("Edad sin cambios");
+		if (!alumno.setVida(30)){
+			System.out.println("vida sin cambios");
 		}
-		System.out.println("Nombre: "+alumno.getNombre()+" Edad: "+alumno.getEdad());
-		System.out.println("Modificando edad en 130");
-		if (!alumno.setEdad(130)){
-			System.out.println("Edad sin cambio");
+		System.out.println("Nombre: "+alumno.getNombre()+" vida: "+alumno.getVida());
+		System.out.println("Modificando vida en 130");
+		if (!alumno.setVida(130)){
+			System.out.println("vida sin cambio");
 		}
-		System.out.println("Nombre: "+alumno.getNombre()+" Edad: "+alumno.getEdad());
+		System.out.println("Nombre: "+alumno.getNombre()+" vida: "+alumno.getVida());
 
 		Personaje per01 = new Personaje("Almendra");
-		per01.setEdad(200);
+		per01.setVida(200);
 		Personaje per02 = new Personaje("Ricardo");
-		per02.setEdad(10);
+		per02.setVida(10);
 		Personaje per03 = new Personaje("Bianca");
-		per03.setEdad(1);
+		per03.setVida(1);
 		Personaje per04 = new Personaje("Leonel");
-		per04.setEdad(-10);
+		per04.setVida(-10);
 		Personaje per05 = new Personaje("Hector");
-		per05.setEdad(500);
+		per05.setVida(500);
 
 		System.out.println(per01.getDetalle());
 		System.out.println(per02.getDetalle());
@@ -42,8 +42,8 @@ public class PruebaPersonaje {
 		Personaje per09 = per02;
 		Personaje per10 = per01;
 
-		per07.setEdad(((int)(Math.random()*100)));
-		per09.setEdad(((int)(Math.random()*100)));
+		per07.setVida(((int)(Math.random()*100)));
+		per09.setVida(((int)(Math.random()*100)));
 		System.out.println("---");
 
 		per06.setNombre("Francisco Xavier Zepeda Flores");
