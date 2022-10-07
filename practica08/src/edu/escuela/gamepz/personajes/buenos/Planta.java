@@ -32,7 +32,7 @@ public class Planta extends Personaje{
 	}
 
 	public String getDetalle(){
-		return (super.getDetalle() + getEscudo());
+		return (super.getDetalle() + "\t" + getEscudo());
 	}
 
 	public void decVida(){

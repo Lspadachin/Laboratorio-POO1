@@ -1,4 +1,4 @@
-//Practica iniciada a las 7:35
+//Practica iniciada a las 7:35, practica finalizada 10:16
 package edu.escuela.gamepz.personajes;
 
 public class Personaje {
@@ -8,7 +8,7 @@ public class Personaje {
 
 	public Personaje(String nombre, int vida){
 		this.nombre = nombre;
-		this.vida = vida;
+		setVida(vida);
 	}
 
 	public Personaje(String personaje){

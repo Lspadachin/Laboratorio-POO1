@@ -25,7 +25,7 @@ public class Zombie extends Personaje {
 	}
 
 	public String getDetalle(){
-		return (super.getDetalle() + getAtaque());
+		return (super.getDetalle() + "\t" + getAtaque());
 	}
 
 	public void decVida(){
