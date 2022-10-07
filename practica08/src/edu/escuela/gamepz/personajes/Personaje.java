@@ -1,11 +1,13 @@
 //Practica iniciada a las 7:35
 package edu.escuela.gamepz.personajes;
+import edu.escuela.gamepz.personajes.buenos.Planta;
+
 public class Personaje {
 
 	private String nombre;
 	private int vida;
 
-	public Personaje(Strig nombre, int vida){
+	public Personaje(String nombre, int vida){
 		this.nombre = nombre;
 		this.vida = vida;
 	}

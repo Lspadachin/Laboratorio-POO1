@@ -3,7 +3,6 @@ import edu.escuela.gamepz.personajes.Personaje;
 
 public class Planta extends Personaje{
 	private char escudo;
-	private int vida = 3;
 
 	public Planta(String nombre, int vida, char escudo){
 		super(nombre, vida);
@@ -11,19 +10,19 @@ public class Planta extends Personaje{
 	}
 
 	public Planta(String nombre, char escudo){
-		super(nombre, vida);
+		super(nombre, 3);
 		this.escudo = escudo;
 
 	}
 
 	public Planta(String nombre, int vida){
 		super(nombre, vida);
-		escudo = "A";
+		escudo = 'A';
 	}
 
 	public Planta(String nombre){
-		super(nombre, vida);
-		escudo = "A";
+		super(nombre, 3);
+		escudo = 'A';
 
 	}
 
@@ -32,13 +31,45 @@ public class Planta extends Personaje{
 	}
 
 	public void decVida(){
-		if ((escudo = "A")&&(vida-2) >= 0)){
-			vida -= 2;
+		int vidaPadre = super.getVida();
+		if (escudo == 'A'){
+			super.decVida(2);
+		}
+
+		if (escudo != 'A') {
+			super.decVida();
+		}
 	}
 
-	
+	public void decVida(int vida){
+		if (escudo == 'A'){
+			super.decVida(2*vida); 
+		}
 
+		if (escudo != 'A'){
+			super.decVida(vida);
+		}
+	}
 
-	public 
+	public void addVida(){
+		int vidaPadre = super.getVida();
+		if (escudo == 'A') {
+			super.addVida(2);
+		}
+		if (escudo != 'A'){
+			super.addVida();
+		}
+	}
+
+	public void addVida(int vida){
+		int vidaPadre = super.getVida();
+		if (escudo == 'A'){
+			super.addVida(2*vida); 
+		}
+
+		if (escudo != 'A'){
+			super.addVida(vida);
+		}
+	}
 
 }
