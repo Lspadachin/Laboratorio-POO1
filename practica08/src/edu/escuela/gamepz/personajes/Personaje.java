@@ -42,7 +42,8 @@ public class Personaje {
 		}
 	}
 	public String getDetalle(){
-		return ""+nombre+"\t"+vida;
+		Planta p = new Planta(nombre, vida);
+		return ""+nombre+"\t"+vida+"\t"+(p.getEscudo());
 	}
 
 	public void decVida(){
