@@ -1,3 +1,5 @@
+package mx.desasof.inmobiliaria.casas;
+
 public class Casa {
 	private String tipo;
 	private int hab;
@@ -18,9 +20,7 @@ public class Casa {
 	}
 
 	public boolean equals(Object obj){
-		if (((this.tipo).equals(obj.tipo)) && (this.costo == obj.costo)){
-			return true;
-		}
+		return ((tipo.equals(((Casa)obj).tipo)) && (costo == ((Casa)obj).costo));
 	}
 
 	public String toString(){
