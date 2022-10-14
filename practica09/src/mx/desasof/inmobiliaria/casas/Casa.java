@@ -12,9 +12,18 @@ public class Casa {
 	public Casa (String tipo) {
 		this (tipo, 2, 2000000);
 	}
-	tipo por habitacion por costo
 
 	public int hashCode(){
-		return tipo*habitacion*costo;
+		return (tipo.hashCode())*hab*((int)costo);
+	}
+
+	public boolean equals(Object obj){
+		if (((this.tipo).equals(obj.tipo)) && (this.costo == obj.costo)){
+			return true;
+		}
+	}
+
+	public String toString(){
+		return (tipo+" "+hab+" "+costo);
 	}
 }
