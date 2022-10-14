@@ -1,12 +1,11 @@
 package mx.desasof.inmobiliaria.pruebas;
-//import mx.desasof.inmobiliaria.casas.Casa;
-//import mx.desasof.inmobiliaria.casas.Campo;
-//import mx.desasof.inmobiliaria.casas.Urbana;
+import mx.desasof.inmobiliaria.casas.Casa;
+import mx.desasof.inmobiliaria.casas.Campo;
+import mx.desasof.inmobiliaria.casas.Urbana;
 
 public class PruebaCasa{
 	public static void main(String[] args) {
-		System.out.println("Hola");
-		/*int i = 0;
+		int i = 0;
 
 		Casa[] casas = {
 			new Casa("Estandar", 3, 3000000),
@@ -22,9 +21,18 @@ public class PruebaCasa{
 
 		while( i < casas.length){
 			for (Casa c: casas){
-				System.out.println(".");
+				if (casas[i] == c){
+					System.out.println(casas[i] + " es igual a " + c);
+					System.out.println(" = = = = = ");
+				} else if (casas[i].equals(c)) {
+					System.out.println(casas[i]+" y "+ c +" son objetos iguales.");
+					System.out.println(" e e e e e ");
+				} else {
+					System.out.println(casas[i] + " no es igual a " + c);
+					System.out.println(" ! ! ! ! ! ");
+				}
 			}//for
 			i++;
-		}//while*/
+		}//while
 	}//main
 }//clase
