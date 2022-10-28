@@ -40,23 +40,15 @@ public abstract class Personaje {
 			return false;
 		}
 	}
-	public String getDetalle(){
+	public String toString(){
 		return ""+nombre+"\t"+vida;
 	}
 
-	public abstract void decVida(){
-		if ((vida-1) >= 0) {
-			vida -= 1;;
-		}
-	}
+	public abstract void decVida();
 
 	public abstract void decVida(int vida);
 
-	public void addVida();
+	public abstract void addVida();
 
-	public void addVida(int vida){
-		if ((this.vida+vida) <= 99){
-			this.vida += vida; 
-		}
-	}
+	public abstract void addVida(int vida);
 }
