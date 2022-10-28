@@ -32,24 +32,24 @@ public class Planta extends Personaje{
 	}
 
 	public String toString(){
-		return (super.toString() + "\t" + getEscudo());
+		return (super.toString() + "\t" + getEscudo())+ "\t" + escudo.getNivel();
 	}
 
 	public void decVida(){
-		vida -= escudo.getNivel();
+		setVida(getVida() - escudo.getNivel());
 	}
 
 	public void decVida(int decremento){
-		vida -= escudo.getNivel() * decremento;
+		setVida(getVida() - (escudo.getNivel() * decremento));
 		
 	}
 
 	public void addVida(){
-		vida += escudo.getNivel();
+		setVida(getVida() + escudo.getNivel());
 	}
 
 	public void addVida(int incremento){
-		vida += escudo.getNivel() * incremento;
+		setVida(getVida() + escudo.getNivel() * incremento);
 	}
 
 }
