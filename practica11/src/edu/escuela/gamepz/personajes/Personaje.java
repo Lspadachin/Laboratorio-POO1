@@ -1,10 +1,10 @@
 //Practica iniciada a las 7:35, practica finalizada 10:16
 package edu.escuela.gamepz.personajes;
 
-public class Personaje {
+public abstract class Personaje {
 
 	private String nombre;
-	private int vida;
+	protected int vida;
 
 	public Personaje(String nombre, int vida){
 		this.nombre = nombre;
@@ -44,23 +44,15 @@ public class Personaje {
 		return ""+nombre+"\t"+vida;
 	}
 
-	public void decVida(){
+	public abstract void decVida(){
 		if ((vida-1) >= 0) {
 			vida -= 1;;
 		}
 	}
 
-	public void decVida(int vida){
-		if ((this.vida-vida) >= 0){
-			this.vida -= vida; 
-		}
-	}
+	public abstract void decVida(int vida);
 
-	public void addVida(){
-		if ((vida+1) <= 99) {
-			vida += 1;
-		}
-	}
+	public void addVida();
 
 	public void addVida(int vida){
 		if ((this.vida+vida) <= 99){
