@@ -26,4 +26,14 @@ public class Tablero{
 		}
 		personajes[pos] = p;
 	}
+
+	public void borrar(int pos) throws PersException{
+		if (pos < 0 || pos > MAX_SIZE){
+			throw new PersException("Incide fuera de rango ", pos);
+		}
+		if (personajes[pos] == null){
+			throw new PersException("Si personaje para borrar ", pos);
+		}
+		personajes[pos] = null;
+	}
 }
