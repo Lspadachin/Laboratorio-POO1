@@ -19,9 +19,7 @@ public abstract class Personaje implements Comparable<Personaje>{
 	}
 
 	public Personaje(String personaje){
-		size = 0.0f;
-		setNombre(personaje);
-		vida = 3;
+		this(personaje, 3, 0.0f);
 	}
 
 	public void setNombre(String nombre) {
@@ -49,7 +47,7 @@ public abstract class Personaje implements Comparable<Personaje>{
 		}
 	}
 	public String toString(){
-		return ""+nombre+"\t"+vida;
+		return ""+nombre+"\tV:"+vida+"\tS"+size;
 	}
 
 	public float genSize(){
