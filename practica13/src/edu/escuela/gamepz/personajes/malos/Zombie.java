@@ -15,8 +15,8 @@ public class Zombie extends Personaje implements Muerto {
 		this(nombre, 3, ataque);
 	}
 
-	public Zombie(String nombre, int vida){
-		super(nombre, vida, 0.0f);
+	public Zombie(String nombre, float size){
+		super(nombre, 3, size);
 	}
 
 	public Zombie(String nombre){
