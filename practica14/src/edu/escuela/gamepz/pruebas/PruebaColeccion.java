@@ -11,6 +11,10 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -61,7 +65,7 @@ public class PruebaColeccion{
 			
 		}//if
 		else {
-			//gardarObjetos(file, arbol);
+			guardarObjetos(f, arbol);
 			System.out.println("Test");
 		}//else
 
@@ -87,12 +91,27 @@ public class PruebaColeccion{
 	} //main
 
 	private static void mostrarDirectorio(File file){
-		System.out.println(file);
-		FileReader a = new FileReader(file);
-		FileWriter b = new FileWriter(a);
+		String[] l = file.list();
+		for (String d : l ) {
+			System.out.println(d);
+		}
 	}
-	//private static void guardarObjetos(File file,TreeSet coleccion){
-//
-//	}
+	private static void guardarObjetos(File file,TreeSet coleccion){
+		System.out.println(coleccion);
+		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		try {
+			FileOutputStream f = new FileOutputStream ("datArbol.ser");
+			ObjectOutputStream s = new ObjectOutputStream (f);
+			for ( Object obj : coleccion ) {
+				System.out.println(obj);
+				Personaje p = (Personaje) obj;
+				s.writeObject (p.toString());
+			}
+			
+			s.close();
+		} catch (Exception e) {
+			System.out.println("Error: "+e);
+		}	
+	}
 
 }//clase
