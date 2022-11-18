@@ -8,6 +8,9 @@ import java.util.LinkedList;
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -26,21 +29,48 @@ public class PruebaColeccion{
 		TreeSet<Personaje> arbol = new TreeSet<>();
 		LinkedList<Personaje> lista = new LinkedList<>();
 
+		//Ruta de mi home
 		String path = System.getProperty("user.home") + System.getProperty("file.separator");
+		//Creacion del Scanner
 		Scanner s = new Scanner(System.in);
+		//Introducir nombre del archivo
 		String fname = s.nextLine();
+		//Agregamos el nombre del archivo a la ruta del home
 		path += fname;
+
+		//Creamos un archivo con la ruta
+		File f = new File(path);
 
 		for (Personaje tmp : datos ) {
 
 			arbol.add(tmp);
 			lista.add(tmp);
-		}
+		}//for
+
+		//Si el archivo/directorio exsite
+		if (f.exists()) {
+			//Si es un archivo -> si no es archivo es directorio
+			if (f.isFile()){
+				System.out.println("Existe");
+				System.exit(0);
+			}
+			else {
+				mostrarDirectorio(f);
+				System.exit(0);
+			}//else
+			
+		}//if
+		else {
+			//gardarObjetos(file, arbol);
+			System.out.println("Test");
+		}//else
 
 		System.out.println(" - - - Orden Natural - - - ");
+
 		for (Personaje p:arbol){
 			System.out.println(p);
-		}
+		}//for
+
 		System.out.println(" - - - Orden Vida - - - ");
 		Collections.sort(lista,new ByVida());
 		for (Personaje p:lista){
@@ -53,7 +83,16 @@ public class PruebaColeccion{
 		for (Personaje p:arr){
 			System.out.println(p);
 		}
-		
 
 	} //main
+
+	private static void mostrarDirectorio(File file){
+		System.out.println(file);
+		FileReader a = new FileReader(file);
+		FileWriter b = new FileWriter(a);
+	}
+	//private static void guardarObjetos(File file,TreeSet coleccion){
+//
+//	}
+
 }//clase
