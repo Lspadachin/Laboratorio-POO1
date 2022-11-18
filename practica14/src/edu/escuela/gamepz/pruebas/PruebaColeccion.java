@@ -9,12 +9,8 @@ import java.util.Collections;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -97,18 +93,17 @@ public class PruebaColeccion{
 		}
 	}
 	private static void guardarObjetos(File file,TreeSet coleccion){
-		System.out.println(coleccion);
-		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 		try {
-			FileOutputStream f = new FileOutputStream ("datArbol.ser");
+			FileOutputStream f = new (file);
 			ObjectOutputStream s = new ObjectOutputStream (f);
 			for ( Object obj : coleccion ) {
 				System.out.println(obj);
-				Personaje p = (Personaje) obj;
-				s.writeObject (p.toString());
+				s.writeObject (obj);
 			}
 			
+			f.close();
 			s.close();
+
 		} catch (Exception e) {
 			System.out.println("Error: "+e);
 		}	

@@ -1,8 +1,9 @@
 //Practica iniciada a las 7:35, practica finalizada 10:16
 package edu.escuela.gamepz.personajes;
 import java.text.DecimalFormat;
+import java.io.Serializable;
 
-public abstract class Personaje implements Comparable<Personaje>, Serializable{
+public abstract class Personaje implements Serializable, Comparable<Personaje>{
 
 	private String nombre;
 	protected int vida;
