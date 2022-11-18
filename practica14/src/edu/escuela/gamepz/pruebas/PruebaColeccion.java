@@ -7,7 +7,7 @@ import java.util.TreeSet;
 import java.util.LinkedList;
 import java.util.Collections;
 import java.util.ArrayList;
-
+import java.util.Scanner;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -25,6 +25,11 @@ public class PruebaColeccion{
 
 		TreeSet<Personaje> arbol = new TreeSet<>();
 		LinkedList<Personaje> lista = new LinkedList<>();
+
+		String path = System.getProperty("user.home") + System.getProperty("file.separator");
+		Scanner s = new Scanner(System.in);
+		String fname = s.nextLine();
+		path += fname;
 
 		for (Personaje tmp : datos ) {
 
