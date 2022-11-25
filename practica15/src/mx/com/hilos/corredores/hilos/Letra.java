@@ -14,12 +14,14 @@ public class Letra implements Runnable{
 		for (int i = 0 ; i<51 ; i++ ) {
 			cadena += ""+letra;
 			etq.setText(cadena);
-			int rand = Math.random()*1000;
+			int rand = (int) Math.random()*1000;
 			try{
-				Thread.sleep(rand)
+				Thread.sleep(rand);
 			} catch (InterruptedException e){
 				System.out.println("Algun error ha ocurrido en el tiempo de espera.");
 			}
-		}	
+		} //for
+		cadena = "Finalizado";
+		etq.setText(cadena);
 	}
 }

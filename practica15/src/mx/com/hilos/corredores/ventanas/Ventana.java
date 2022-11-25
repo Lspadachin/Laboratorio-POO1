@@ -39,12 +39,7 @@ public class Ventana extends JFrame {
 		lblElem2 = new JLabel("Hilo 2");
 		txtElem2 = new JTextField(3);
 		btnStart = new JButton("Comenzar");
-		btnStart.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				btnStart.setEnabled(false);
-				//RunHilos.start();
-			}
-		});
+
 		hElem1 = new JLabel(" Aqui va el hilo 1 ");
 		hElem1.setBorder(BorderFactory.createLineBorder(border));
 		hElem1.setPreferredSize(lblDim);
@@ -52,6 +47,13 @@ public class Ventana extends JFrame {
 		hElem2.setBorder(BorderFactory.createLineBorder(border));
 		hElem2.setPreferredSize(lblDim);
 		btnStart.setPreferredSize(lblDim);
+		
+		btnStart.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				btnStart.setEnabled(false);
+				RunHilos.iniciar(txtElem1, txtElem2, hElem1, hElem2);
+			}
+		});
 
 		this.setTitle("Practica 15");
 		this.setLayout(new FlowLayout());
