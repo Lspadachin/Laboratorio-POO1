@@ -16,5 +16,9 @@ public class RunHilos{
 		elem2.setText(salida2);
 		Letra hilo1 = new Letra(elem1, ch1);
 		Letra hilo2 = new Letra(elem2, ch2);
+		//Thread hi1 = Thread(hilo1);
+		//Thread hi2 = Thread(hilo2);
+		hilo1.start();
+		hilo2.start();
 	}
 }
