@@ -9,7 +9,7 @@ public class RunHilos{
 	public static void iniciar(JTextField txt1, JTextField txt2, JLabel elem1, JLabel elem2){
 
 		char ch1 = (txt1.getText().length() > 0) ? ( (txt1.getText().charAt(0) == ' ') ? ('E') : txt1.getText().charAt(0) ) : ('E');
-		char ch2 = (txt2.getText().length() > 0) ? ( (txt2.getText().charAt(0) == ' ') ? ('M') : txt1.getText().charAt(0) ) : ('M');
+		char ch2 = (txt2.getText().length() > 0) ? ( (txt2.getText().charAt(0) == ' ') ? ('M') : txt2.getText().charAt(0) ) : ('M');
 		String salida1 = ""+ch1;
 		String salida2 = ""+ch2;
 		elem1.setText(salida1);
