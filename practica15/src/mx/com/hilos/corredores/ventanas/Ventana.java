@@ -1,3 +1,13 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Dimension;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+
 public class Ventana extends JFrame {
 	private JLabel lblTitulo;
 	private JLabel lblElem1;
@@ -24,6 +34,11 @@ public class Ventana extends JFrame {
 		lblElem2 = new JLabel("Hilo 2");
 		txtElem2 = new JTextField(3);
 		btnStart = new JButton("Comenzar");
+		btnStart.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				btnStart.setEnable(false);
+			}
+		});
 		hElem1 = new JLabel(" Aqui va el hilo 1 ");
 		hElem1.setBorder(BorderFactory.createLineBorder(border));
 		hElem1.setPreferredSize(lblDim);
